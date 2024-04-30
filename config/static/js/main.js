@@ -10,14 +10,25 @@ sign_up()
 d.addEventListener("DOMContentLoaded", e => {
 
 
+    let buttonSale = d.getElementById('buttonSale');
+    let buttonView = d.getElementById('buttonView');
+
+
+    buttonSale.addEventListener('click',e=>{
+        switchTab2('Sale')
+    })
+
+    buttonView.addEventListener('click',e=>{
+        switchTab2('View')
+    })
+
     //Seleccionar elementos
     const tabSignin = d.querySelector(".buttonIn");
     const tabSignup = d.querySelector(".buttonUp");
     const savedTab = localStorage.getItem('selectedTab');
     const heroImage = d.getElementById('hero-image');
     const buttonLogin = d.getElementById('buttonLogin');
-    const buttonSale = d.getElementById('buttonSale');
-    const buttonView = d.getElementById('buttonView');
+    
 
 
     //Poner contenido según ultima escogencia del usuario

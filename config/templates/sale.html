@@ -1,12 +1,26 @@
-{% extends './layout.html' %}
-{% block body %}
-    <main class="main__content  -black w-full h-[100vh] flex flex-col pt-10">
-        <div class="container__inputs w-[100%] h-[10%] flex items-center justify-end">
-            <button id="buttonSale" class="tab-link border border-none w-auto pl-10 pr-10 h-full color-main font-bold">Make sales request</button>
-            <button id="buttonView" class="tab-link border border-none w-auto pl-10 pr-10 h-full">Show sales requests</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vibeOn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/sale.css') }}">
+</head>
+<body class="w-full h-[100vh] black overflow-hidden gradient">
+    <header class="w-full h-[10vh] flex items-center justify-between p-[10px]">
+        <section class="image__container w-[10%] flex flex-col items-center h-full ml-[10px]">
+            <img id="image-header" class="max-w-[45%] h-auto" alt="hero-image" src="{{ url_for('static', filename='assets/ecosistemas-icono.png') }}">
+        </section>
+        <div class="user_info w-[20%] h-full flex items-center justify-end  pr-10">
+            <span class=" border border-none bg-main rounded-[50%] w-[50px] h-[50px] text-white flex items-center justify-center mr-[18px]">M</span>
+            <span>You are a salesman</span>             
         </div>
-        <section class="container__inputs w-full h-[90%] contentTab" id="Sale-Content">
-            <article class="inputs__content w-full h-full flex flex-col justify-evenly items-center">
+    </header>
+    <main class="main__content  -black w-full h-[100vh] flex flex-col pt-10">
+        <section class="container__inputs w-full h-[90%] contentTab flex" id="Sale-Content">
+            <article class="inputs__content w-[40%] h-full flex flex-col justify-evenly items-center">
                 <div class="container__material  w-1/2 h-auto flex flex-col items-center p-[10px]">
                     <span>Type of material</span>
                     <select id="dropdownMaterial" class="w-[70%] h-full border border-grey-400 rounded-md "></select>
@@ -23,9 +37,7 @@
                     <button class="w-[70%] h-full border border-grey-400 rounded-md bg-main text-white">Make a sales request</button>
                 </div>
             </article>
-        </section>
-        <section class="hidden container__inputs w-full h-[90%] contentTab" id="View-Content">
-            <article class="inputs__content w-full h-full flex flex-col justify-evenly items-center flex flex-col pl-[100px] pr-[100px]">
+            <article class="inputs__content w-[60%] h-full flex flex-col justify-evenly items-center flex flex-col pl-[10px] pr-[10px]">
                 <div class="card w-[100%] h-[45%] flex box-shadow rounded-md">
                     <div class="chart__left w-1/2 h-[100%] flex flex-col justify-around">
                         <div class="container_material  w-full h-auto p-[5px] flex ">
@@ -62,6 +74,9 @@
                 </div>
             </article>
         </section>
+       
     </main>
     <script src="{{ url_for('static', filename='js/main.js') }}" type="module"></script>
-    {% endblock %}
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+</body>
+</html>

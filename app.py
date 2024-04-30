@@ -27,5 +27,10 @@ def error4():
     return render_template('404.html')
 
 
+@app.route("/sale")
+def sale():
+    return render_template('sale.html')
+
+
 if __name__ == '__main__': 
     app.run(debug=True, port=5000)

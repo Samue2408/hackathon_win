@@ -2,8 +2,10 @@ const d = document,
       w = window
 
 import {switchTab, countCharacters, setImage, login} from "../js/inicio.js"
+import { signin } from "./signin.js";
 
 
+signin()
 d.addEventListener("DOMContentLoaded", e => {
 
 

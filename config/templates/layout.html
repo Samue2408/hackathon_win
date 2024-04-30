@@ -13,12 +13,9 @@
         <section class="image__container w-[10%] flex flex-col items-center h-full ml-[10px]">
             <img id="image-header" class="max-w-[45%] h-auto" alt="hero-image" src="{{ url_for('static', filename='assets/ecosistemas-icono.png') }}">
         </section>
-        <div class="user_info w-[20%] h-full flex items-center justify-end border border-black">
+        <div class="user_info w-[20%] h-full flex items-center justify-end border border-black pr-10">
             <span class=" border border-none bg-main rounded-[50%] w-[50px] h-[50px] text-white flex items-center justify-center mr-[18px]">M</span>
-            <div id="" class="container__input  cursor-pointer -black w-[50px] h-[50px] relative z-0 flex items-center justify-center rounded-[50%] bg-main text-white flex items-center justify-center none">
-                <input type="text" class="cursor-pointer gradient w-full h-full absolute left-0 top-0 z-49 rounded-[50%] bg-main  border border-none" disabled>
-                <i class="fa-solid fa-search z-50 color-main cursor-pointer"></i>
-            </div>              
+            <span>You are a salesman</span>             
         </div>
     </header>
     {% endblock%}

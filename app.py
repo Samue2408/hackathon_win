@@ -3,7 +3,7 @@ from config.db import app, db
 
 from api.Roles import ruta_rol
 from api.Users import ruta_users
-from api.materials import ruta_materials
+from api.Materials import ruta_materials
 
 app.register_blueprint(ruta_rol, url_prefix="/api/roles")
 app.register_blueprint(ruta_users, url_prefix="/api/users")

@@ -1,0 +1,16 @@
+.color-main{
+    color: #38833E;
+}
+
+.bg-main{
+    background-color: #38833E;
+}
+
+
+.text-white{
+    color: white;
+}
+
+.gradient{
+    background: linear-gradient(#f2f2f2, white);
+}

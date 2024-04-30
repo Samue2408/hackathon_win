@@ -1,0 +1,57 @@
+.bg-body{
+    background-color: #64746A;
+}
+
+
+.h-100vh{
+    height: 100vh;
+}
+
+.active{
+    background-color: white;
+    transition: .5s ease-in-out;
+    animation: upButton .5s ease;
+    border-radius: 10px;
+    box-shadow: -1px -1px 8px #727272, 1px 1px 6px #ccc;
+}
+
+.bg-blue-main{
+    background-color: #58775c;
+}
+
+
+
+.colorIcon{
+    color: grey;
+}
+
+
+.activeIcon{
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.red{
+    background-color: red;
+}
+
+.color-red{
+    color: red;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.green{
+    background-color: green;
+}
+
+
+
+
+
+
+
+

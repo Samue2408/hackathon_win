@@ -13,7 +13,7 @@ class Users(db.Model):
     location = db.Column(db.String(100))
     ability = db.Column(db.Integer)
 
-    def __init__(self, name, id_roles, user, password, phone, mail, location, ability= None):
+    def __init__(self, id_roles, user, password, mail, location = None, ability= None, name = None, phone = None,):
         self.name = name,
         self.id_roles = id_roles
         self.user = user,

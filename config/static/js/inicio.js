@@ -26,7 +26,7 @@ export function switchTab(tab) {
 
   const selectedLink = d.querySelector(`.button${tab}`);
   if (selectedLink) {
-    selectedLink.classList.add('active');
+    selectedLink.classList.add('color-main');
   }
 }
 

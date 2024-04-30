@@ -1,30 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vibeOn</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
-</head>
-<body class="w-full h-[100vh] black overflow-hidden gradient">
-    <header class="w-full h-[10vh] flex items-center justify-between p-[10px]">
-        <section class="image__container w-[10%] flex flex-col items-center h-full ml-[10px]">
-            <img id="hero-image" class="max-w-[45%] h-auto" alt="hero-image" src="{{ url_for('static', filename='assets/ecosistemas-icono.png') }}">
-        </section>
-        <div class="user_info w-[20%] h-full flex items-center justify-end">
-            <span class=" border border-none bg-main rounded-[50%] w-[50px] h-[50px] text-white flex items-center justify-center mr-[18px]">M</span>
-            <div class="container__input  cursor-pointer -black w-[50px] h-[50px] relative z-0 flex items-center justify-center rounded-[50%] bg-main text-white flex items-center justify-center none">
-                <input type="text" class="cursor-pointer gradient w-full h-full absolute left-0 top-0 z-49 rounded-[50%] bg-main  border border-none" disabled>
-                <i class="fa-solid fa-search z-50 color-main cursor-pointer"></i>
-            </div>              
-        </div>
-    </header>
+{% extends './layout.html' %}
+    {% block body %}
     <main class="main__content  -black w-full h-[100vh] flex">
         <div class="main__description  -black w-1/2 p-[5%]">
             <section class="content  -black w-[100%] h-[75%] flex flex-col items-start justify-center pl-[10px]">
-                <h2 class="text-[4.7rem] font-[700]">Recycle with us</h2>
-                <span class="text-[2.5rem] font-[700] color-main">VibeOn</span>
+                <h2 class="text-[4.7rem] font-[700] color-main">Recycle with us</h2>
+                <span class="text-[1.9rem] w-[60%] font-[700]">We are a platform that helps you put your recycling to use</span>
             </section>
             <section class="content  '-red w-[100%] h-[20%] flex flex-col items-start justify-center pl-[10px]">
                 <button class=" -none bg-main w-[20%] p-[10px] text-white rounded-[2px] text-[1.5rem]">Sell</button>
@@ -34,7 +14,4 @@
             <img id="hero-image" class="max-w-[90%] h-auto" alt="hero-image" src="{{ url_for('static', filename='assets/manReci.png') }}">
         </div>
     </main>
-    <script src="{{ url_for('static', filename='js/main.js') }}" type="module"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-</body>
-</html>
+    {% endblock %}

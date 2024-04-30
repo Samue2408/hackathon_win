@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body class="border border-black w-full h-[100vh]">
-
+<body class="border border-black w-full h-[100vh]x">
+    <picture class="image__container border border-black w-1/2 h-[60%] flex items-center justify-center">
+        <img class="max-w-[100%] h-auto" src="{{ url_for('static', filename='assets/404.png') }}" alt="logo">
+    </picture>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </body>
 </html>

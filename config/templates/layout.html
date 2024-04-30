@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vibeOn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+</head>
+<body class="w-full h-[100vh] black overflow-hidden gradient">
+    {% block header %}
+    <header class="w-full h-[10vh] flex items-center justify-between p-[10px]">
+        <section class="image__container w-[10%] flex flex-col items-center h-full ml-[10px]">
+            <img id="image-header" class="max-w-[45%] h-auto" alt="hero-image" src="{{ url_for('static', filename='assets/ecosistemas-icono.png') }}">
+        </section>
+        <div class="user_info w-[20%] h-full flex items-center justify-end border border-black">
+            <span class=" border border-none bg-main rounded-[50%] w-[50px] h-[50px] text-white flex items-center justify-center mr-[18px]">M</span>
+            <div id="" class="container__input  cursor-pointer -black w-[50px] h-[50px] relative z-0 flex items-center justify-center rounded-[50%] bg-main text-white flex items-center justify-center none">
+                <input type="text" class="cursor-pointer gradient w-full h-full absolute left-0 top-0 z-49 rounded-[50%] bg-main  border border-none" disabled>
+                <i class="fa-solid fa-search z-50 color-main cursor-pointer"></i>
+            </div>              
+        </div>
+    </header>
+    {% endblock%}
+    {% block body %}
+    {% endblock %}
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="module"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+</body>
+</html>

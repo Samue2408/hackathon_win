@@ -16,11 +16,9 @@ def materials():
 
 @ruta_materials.route("/save", methods=["POST"])
 def save_materials():  
-    date_time = request.json['date_time']
-    user = request.json['user']
-    publication = request.json['publication']
-    quotes = request.json['quotes']
-    new_materials = Materials(date_time = date_time, user = user, publication = publication, quotes = quotes)
+    name = request.json['name']
+    price = request.json['price']
+    new_materials = Materials(name= name, price= price)
     db.session.add(new_materials)
     db.session.commit()
     resultall = materials_schema.dump(Materials.query.all())
@@ -31,10 +29,8 @@ def save_materials():
 def update_materials():
     id = request.json["id"]
     nMaterial = Materials.query.get(id)
-    nMaterial.date_time = request.json['date_time']
-    nMaterial.user = request.json['user']
-    nMaterial.publication = request.json['publication']
-    nMaterial.quotes = request.json['quotes']
+    nMaterial.name = request.json['name']
+    nMaterial.price = request.json['price']
     db.session.commit()
     return "Datos actualizados con exito"
 

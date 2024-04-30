@@ -1,13 +1,27 @@
 {% extends './layout.html' %}
     {% block body %}
-    <main class="main__content  -black w-full h-[100vh] flex">
+    <main class="hidden main__content  -black w-full h-[100vh] flex" id="vendedor">
         <div class="main__description  -black w-1/2 p-[5%]">
             <section class="content  -black w-[100%] h-[75%] flex flex-col items-start justify-center pl-[10px]">
                 <h2 class="text-[4.7rem] font-[700] color-main">Recycle with us</h2>
                 <span class="text-[1.9rem] w-[60%] font-[700]">We are a platform that helps you put your recycling to use</span>
             </section>
             <section class="content  '-red w-[100%] h-[20%] flex flex-col items-start justify-center pl-[10px]">
-                <button class=" -none bg-main w-[20%] p-[10px] text-white rounded-[2px] text-[1.5rem]">Sell</button>
+                <a class=" -none bg-main w-[20%] p-[10px] text-white rounded-[2px] text-[1.5rem] rounded-md">Sell</a>
+            </section>
+        </div>
+        <div class="main__hero-image  -black w-1/2 flex items-center justify-center">
+            <img id="hero-image" class="max-w-[90%] h-auto" alt="hero-image" src="{{ url_for('static', filename='assets/manReci.png') }}">
+        </div>
+    </main>
+    <main class="main__content  -black w-full h-[100vh] flex" id="reciclador">
+        <div class="main__description  -black w-1/2 p-[5%]">
+            <section class="content  -black w-[100%] h-[75%] flex flex-col items-start justify-center pl-[10px]">
+                <h2 class="text-[4.7rem] font-[700] color-main">Recycle with us</h2>
+                <span class="text-[1.9rem] w-[60%] font-[700]">We are a platform that helps you put your recycling to use</span>
+            </section>
+            <section class="content  '-red w-[100%] h-[20%] flex flex-col items-start justify-center pl-[10px]">
+                <a class=" -none bg-main w-[20%] p-[10px] text-white rounded-[2px] text-[1.5rem] rounded-md text-align-center">Buy</a>
             </section>
         </div>
         <div class="main__hero-image  -black w-1/2 flex items-center justify-center">

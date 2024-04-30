@@ -2,26 +2,17 @@
 {% block body %}
     <main class="main__content  -black w-full h-[100vh] flex flex-col pt-10">
         <div class="container__inputs w-[100%] h-[10%] flex items-center justify-end">
-            <button id="buttonSale" class="tab-link border border-none w-auto pl-10 pr-10 h-full color-main font-bold">Make sales request</button>
-            <button id="buttonView" class="tab-link border border-none w-auto pl-10 pr-10 h-full">Show sales requests</button>
+            <button id="buttonSale" class="tab-link border border-none w-auto pl-10 pr-10 h-full color-main font-bold">View requests</button>
+            <button id="buttonView" class="tab-link border border-none w-auto pl-10 pr-10 h-full">Record</button>
         </div>
         <section class="container__inputs w-full h-[90%] contentTab" id="Sale-Content">
             <article class="inputs__content w-full h-full flex flex-col justify-evenly items-center">
-                <div class="container__material  w-1/2 h-auto flex flex-col items-center p-[10px]">
-                    <span>Type of material</span>
-                    <select id="dropdownMaterial" class="w-[70%] h-full border border-grey-400 rounded-md "></select>
-                </div>
-                <div class="container__amount  w-1/2 h-auto p-[10px] flex flex-col items-center">
-                    <span>Amount</span>
-                    <input type="text" class="w-[70%] h-full border border-grey-400 rounded-md">
-                </div>
-                <div class="container__price w-1/2 h-auto p-[10px] flex flex-col items-center">
-                    <span>Price</span>
-                    <input type="number" class="w-[70%] h-full border border-grey-400 rounded-md">
-                </div>
-                <div class="container__button w-1/2 h-[10%] mb-[30px] flex justify-center">
-                    <button class="w-[70%] h-full border border-grey-400 rounded-md bg-main text-white">Make a sales request</button>
-                </div>
+               <div class="w-[90%] h-[20%] border border-black relative flex flex-col justify-around">
+                    <span class="w-auto h-auto border border-black">is offering you a product</span>
+                    <button class="absolute left-[50%] bottom-0">View more</button>
+                    <button class="absolute left-[50%] bottom-0">Accept</button>
+                    <button class="absolute left-[50%] bottom-0">Negotiate</button>
+               </div>
             </article>
         </section>
         <section class="hidden container__inputs w-full h-[90%] contentTab" id="View-Content">

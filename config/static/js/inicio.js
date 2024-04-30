@@ -26,11 +26,34 @@ export function switchTab(tab) {
 
   const selectedLink = d.querySelector(`.button${tab}`);
   if (selectedLink) {
-    selectedLink.classList.add('color-main');
+    selectedLink.classList.add('active');
   }
 }
 
-
+export function switchTab2(tab) {
+    const tabContents = document.querySelectorAll('.contentTab');
+    tabContents.forEach(content => {
+      content.classList.add('hidden');
+      content.classList.remove('flex');
+    });
+  
+    const selectedContent = document.querySelector(`#${tab}-Content`);
+    if (selectedContent) {
+      selectedContent.classList.remove('hidden');
+      selectedContent.classList.add('flex');
+      saveContent(tab);
+    }
+  
+    const tabLinks = document.querySelectorAll('.tab-link');
+    tabLinks.forEach(link => {
+      link.classList.remove('color-main');
+    });
+  
+    const selectedLink = document.querySelector(`#button${tab}`);
+    if (selectedLink) {
+      selectedLink.classList.add('color-main');
+    }
+  }
 
 
 function saveContent(tab) {

@@ -1,7 +1,7 @@
 const d = document,
       w = window
 
-import {switchTab, countCharacters, setImage, login} from "../js/inicio.js"
+import {switchTab, countCharacters, setImage, login, switchTab2} from "../js/inicio.js"
 import { signin, sign_up } from "./signin.js";
 
 
@@ -17,7 +17,7 @@ d.addEventListener("DOMContentLoaded", e => {
     const heroImage = d.getElementById('hero-image');
     const buttonLogin = d.getElementById('buttonLogin');
     const buttonSale = d.getElementById('buttonSale');
-    const buttonView = d.getElementById('buttonView')
+    const buttonView = d.getElementById('buttonView');
 
 
     //Poner contenido según ultima escogencia del usuario
@@ -50,14 +50,7 @@ d.addEventListener("DOMContentLoaded", e => {
         heroImage.setAttribute("src", "/static/assets/manReci.png");
       });
 
-      buttonSale.addEventListener('click',e=>{
-        switchTab('Sale')
-      })
-
-      buttonView.addEventListener('click',e=>{
-        switchTab('View')
-      })
-
+      
 
 
     countCharacters('passwordRegister','iconToChange')

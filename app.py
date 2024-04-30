@@ -17,14 +17,10 @@ def index():
 def home():
     return render_template('home.html')
 
-# @app.errorhandler(404)
-# def not_found_error(error):
-#     return render_template('404.html'),404
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html'),404
 
-
-@app.route("/404")
-def error4():
-    return render_template('404.html')
 
 
 @app.route("/sale")

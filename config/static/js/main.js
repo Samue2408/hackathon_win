@@ -9,19 +9,6 @@ signin()
 sign_up()
 d.addEventListener("DOMContentLoaded", e => {
 
-
-    let buttonSale = d.getElementById('buttonSale');
-    let buttonView = d.getElementById('buttonView');
-
-
-    buttonSale.addEventListener('click',e=>{
-        switchTab2('Sale')
-    })
-
-    buttonView.addEventListener('click',e=>{
-        switchTab2('View')
-    })
-
     //Seleccionar elementos
     const tabSignin = d.querySelector(".buttonIn");
     const tabSignup = d.querySelector(".buttonUp");

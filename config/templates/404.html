@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
 </head>
-<body class="border border-black w-full h-[100vh]x">
-    <picture class="image__container border border-black w-1/2 h-[60%] flex items-center justify-center">
+<body class="w-full h-[100vh]x overflowHidden">
+    <picture class="image__container w-full h-[100vh] flex items-center justify-center flex-col">
         <img class="max-w-[100%] h-auto" src="{{ url_for('static', filename='assets/404.png') }}" alt="logo">
+        <a href="home.html" class="p-[10px] border border-none bg-main rounded-md text-white mt-10">Return to home</a>
     </picture>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </body>

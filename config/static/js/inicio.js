@@ -31,6 +31,8 @@ export function switchTab(tab) {
 }
 
 
+
+
 function saveContent(tab) {
   localStorage.setItem('selectedTab', tab);
 }
@@ -84,19 +86,3 @@ export function login(username, password, incorrect) {
 }
 
 
-export function animation(button){
-    const buttonContainer = d.getElementById(button);
-
-    buttonContainer.addEventListener('click',e=>{
-        const container = d.getElementById('containerButtonSearch')
-        const input = d.getElementById('inputSearch');
-        
-        container.classList.remove('w-[50px]','rounded-[50%]');
-        container.classList.add('w-[200px]')
-
-        input.classList.remove('rounded-[50%]')
-
-    })
-
-
-}

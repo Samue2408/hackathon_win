@@ -12,5 +12,16 @@
 }
 
 .gradient{
-    background: linear-gradient(#f2f2f2, white);
+    background-color:  white;
+}
+
+
+.activeTab{
+    border-bottom: 1px solid #38833E;
+    color: #38833E;
+}
+
+
+.box-shadow{
+    box-shadow: 5px 5px 5px #ccc, -5px -5px 5px #ccc;
 }

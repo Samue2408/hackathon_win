@@ -15,6 +15,8 @@ d.addEventListener("DOMContentLoaded", e => {
     const savedTab = localStorage.getItem('selectedTab');
     const heroImage = d.getElementById('hero-image');
     const buttonLogin = d.getElementById('buttonLogin');
+    const buttonSale = d.getElementById('buttonSale');
+    const buttonView = d.getElementById('buttonView')
 
 
     //Poner contenido según ultima escogencia del usuario
@@ -46,6 +48,14 @@ d.addEventListener("DOMContentLoaded", e => {
         switchTab('Up');
         heroImage.setAttribute("src", "/static/assets/manReci.png");
       });
+
+      buttonSale.addEventListener('click',e=>{
+        switchTab('Sale')
+      })
+
+      buttonView.addEventListener('click',e=>{
+        switchTab('View')
+      })
 
 
 

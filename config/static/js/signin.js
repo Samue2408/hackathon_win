@@ -21,7 +21,15 @@ export function signin() {
           .then(response => response.json())
           .then(data => {
             if (data.error) {
-              return true;
+              Swal.fire({
+                title: data.error,
+                text: 'Credenciales incorrectas. Vuelve a intertarlo.',
+                icon: 'error',
+                backdrop: false,
+                confirmButtonColor: "#b70811",
+                timer: 7000,
+                timerProgressBar: true,
+              })
             } else {
             
                 alert

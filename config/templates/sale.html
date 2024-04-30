@@ -1,9 +1,66 @@
 {% extends './layout.html' %}
 {% block body %}
-    <main class="main__content  -black w-full h-[100vh] flex border border-black pt-10">
-        <div class="container__inputs border border-black w-[100%] h-[10%]">
-            <button class="w-[40px] border border-black h-full"></button>
-            <button></button>
+    <main class="main__content  -black w-full h-[100vh] flex flex-col pt-10">
+        <div class="container__inputs w-[100%] h-[10%] flex items-center justify-end">
+            <button id="buttonSale" class="border border-none w-auto pl-10 pr-10 h-full color-main font-bold">Make sales request</button>
+            <button id="buttonView" class="border border-none w-auto pl-10 pr-10 h-full">Show sales requests</button>
         </div>
+        <section class="container__inputs w-full h-[90%]" id="SaleContent">
+            <article class="inputs__content w-full h-full flex flex-col justify-evenly items-center">
+                <div class="container__material  w-1/2 h-auto flex flex-col items-center p-[10px]">
+                    <span>Type of material</span>
+                    <select id="dropdownMaterial" class="w-[70%] h-full border border-grey-400 rounded-md "></select>
+                </div>
+                <div class="container__amount  w-1/2 h-auto p-[10px] flex flex-col items-center">
+                    <span>Amount</span>
+                    <input type="text" class="w-[70%] h-full border border-grey-400 rounded-md">
+                </div>
+                <div class="container__price w-1/2 h-auto p-[10px] flex flex-col items-center">
+                    <span>Price</span>
+                    <input type="number" class="w-[70%] h-full border border-grey-400 rounded-md">
+                </div>
+                <div class="container__button w-1/2 h-[10%] mb-[30px] flex justify-center">
+                    <button class="w-[70%] h-full border border-grey-400 rounded-md bg-main text-white">Make a sales request</button>
+                </div>
+            </article>
+        </section>
+        <section class="hidden container__inputs w-full h-[90%]" id="ViewContent">
+            <article class="inputs__content w-full h-full flex flex-col justify-evenly items-center flex flex-col pl-[100px] pr-[100px]">
+                <div class="card w-[100%] h-[45%] flex box-shadow rounded-md">
+                    <div class="chart__left w-1/2 h-[100%] flex flex-col justify-around">
+                        <div class="container_material  w-full h-auto p-[5px] flex ">
+                            <span class="w-1/2 h-full  font-medium">Type of material</span>
+                            <span class="w-1/2 h-full ">Type of material</span>
+                        </div>
+                        <div class="container_amount w-full h-auto p-[5px] flex ">
+                            <span class="w-1/2 h-full  font-medium">Amount</span>
+                            <span class="w-1/2 h-full ">Amount</span>
+                        </div>
+                        <div class="container_material w-full h-auto p-[5px] flex ">
+                            <span class="w-1/2 h-full font-medium">Price</span>
+                            <span class="w-1/2 h-full ">30000</span>
+                        </div>
+                    </div>
+                    <div class="chart__right  w-1/2 h-[100%] flex flex-col justify-evenly">
+                        <div class="container_material w-full h-auto p-[5px] flex ">
+                            <span class="w-1/2 h-full  font-medium">Recycler name</span>
+                            <span class="w-1/2 h-full ">Recycler name</span>
+                        </div>
+                        <div class="container_amount  w-full h-auto p-[5px] flex ">
+                            <span class="w-1/2 h-full  font-medium">Address</span>
+                            <span class="w-1/2 h-full ">Address</span>
+                        </div>
+                        <div class="container_material w-full h-auto p-[5px] flex ">
+                            <span class="w-1/2 h-full font-medium">Date</span>
+                            <span class="w-1/2 h-full">Date</span>
+                        </div>
+                        <div class="container_material w-full h-auto p-[5px] flex ">
+                            <span class="w-1/2 h-full  font-medium">Status</span>
+                            <span class="w-1/2 h-full ">Status</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
     {% endblock %}

@@ -11,7 +11,9 @@ app.register_blueprint(ruta_users, url_prefix="/api/users")
 def index():
     return render_template('login.html')
 
-
+@app.route("/home")
+def home():
+    return render_template('home.html')
 
 if __name__ == '__main__': 
     app.run(debug=True, port=5000)

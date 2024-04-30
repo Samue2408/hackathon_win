@@ -25,8 +25,7 @@ def saveUser():
 
         role = request.json['role'].title()
 
-        ro = db.session.query(Roles.id).filter(Roles.type_user == role).all()
-        role_result = roles_schema.dump(ro)  
+        role_result = roles_schema.dump(db.session.query(Roles.id).filter(Roles.type_user == role).all())  
 
         if len(role_result) > 0:
             id_role = role_result[0]['id']
@@ -59,7 +58,9 @@ def updateUsers():
     nUser = Users.query.get(id) #Select * from Cliente where id = id
     nUser.name = request.json['name'].title()        
     nUser.user = request.json['user'].lower()
-    nUser.id_roles = request.json['role'].lower()
+    role_result = roles_schema.dump(db.session.query(Roles.id).filter(Roles.type_user == request.json['role'].lower()).all())  
+    id_role = role_result[0]['id']
+    nUser.id_roles = id_role
     nUser.password = request.json['password']
     nUser.mail = request.json['mail']
     nUser.phone = request.json['phone']
@@ -74,3 +75,22 @@ def deleteUser(id):
     db.session.delete(User)
     db.session.commit()
     return jsonify(user_schema.dump(User))
+
+@ruta_users.route("/signin", methods=["POST"])
+def signin():
+    user = request.json['user'].lower()
+    password = request.json['password']
+    user_ = db.session.query(Users).filter(Users.user == user, Users.password == password).all()
+    result = users_schema.dump(user_)
+
+    if len(result)>0:
+        usuario = result[0]
+
+        ro = db.session.query(Roles.type_user).filter(Roles.id == usuario["id_roles"]).all()
+        rol_result = roles_schema.dump(ro) 
+
+        session['user'] = rol_result
+            
+        return jsonify({'mensaje': 'Bienvenido'})
+    else:
+        return jsonify({'error': 'Opss...'}), 401

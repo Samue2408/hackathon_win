@@ -12,7 +12,7 @@ def materials():
     resultall =  Materials.query.all()
     result = materials_schema.dump(resultall)
     session['materials'] = result
-    return redirect(url_for("materials"))
+    return result
 
 @ruta_materials.route("/save", methods=["POST"])
 def save_materials():  

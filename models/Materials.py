@@ -3,7 +3,7 @@ from config.db import app, db, ma
 class Materials(db.Model):
     __tablename__ = "Materials"
     
-    id = db.Column(db.Integer, primary_key=True,)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(100))
     price = db.Column(db.Integer)
     

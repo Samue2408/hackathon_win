@@ -9,15 +9,17 @@ class Requests(db.Model):
     id_state = db.Column(db.Integer, db.ForeignKey('States.id'))
     id_seller = db.Column(db.Integer, db.ForeignKey('Users.id'))
     id_buyer = db.Column(db.Integer, db.ForeignKey('Users.id'))
+    id_materials = db.Column(db.Integer, db.ForeignKey('Materials.id'))
     location = db.Column(db.String(100))
     date_time = db.Column(db.DateTime, default=datetime.utctimetuple)
     quantity = db.Column(db.Integer)
     price = db.Column(db.Integer)
 
-    def __init__(self, id_state, id_seller, id_buyer, location, date_time, quantity, price):
+    def __init__(self, id_state, id_seller, id_buyer, id_materials,location, date_time, quantity, price):
         self.id_state = id_state,
         self.id_seller = id_seller
         self.id_buyer = id_buyer,
+        self.id_materials = id_materials
         self.location = location,
         self.date_time = date_time,
         self.quantity = quantity,
@@ -28,4 +30,4 @@ with app.app_context():
 
 class RequestsSchema(ma.Schema):
     class Meta:
-        fields = ('id', 'id_state', 'id_seller', 'id_buyer', 'location', 'date_time', 'quantity','price')
+        fields = ('id', 'id_state', 'id_seller', 'id_buyer', 'id_materials', 'location', 'date_time', 'quantity','price')

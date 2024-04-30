@@ -29,17 +29,13 @@ def saveUser():
 
         if len(role_result) > 0:
             id_role = role_result[0]['id']
-
-            name = request.json['name'].title()        
             password = request.json['password']
             mail = request.json['mail']
-            phone = request.json['phone']
-            location = request.json['location']
 
             if role == "Seller":
-                new_User = Users(name= name,id_roles= id_role, user= user, password= password, phone= phone, mail= mail, location= location)
+                new_User = Users(id_roles= id_role, user= user, password= password, mail= mail)
             elif role == "Buyer":
-                new_User = Users(name= name,id_roles= id_role, user= user, password= password, phone= phone, mail= mail, location= location, ability= 500)
+                new_User = Users(id_roles= id_role, user= user, password= password, mail= mail, ability= 500)
             
             db.session.add(new_User)
             db.session.commit()
